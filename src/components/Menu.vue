@@ -1,7 +1,18 @@
 <template>
-<h3> 
-    I am the menu component
-</h3>
+<ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="/">Contact Us</a>
+        </li>
+        <li>
+            <a href="/">About US</a>
+        </li>
+        <li>
+            <a href="/">Our Team</a>
+        </li>
+    </ul>
 </template>
 
 <script>
@@ -10,7 +21,17 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+ul, li {
+    padding: 0;
+    margin: 0;
+}
 
+ul {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    list-style-type: none;
+}
 </style>
 
