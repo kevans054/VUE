@@ -1,29 +1,39 @@
+
 <template>
   <div id="app">
-    <vue-header></vue-header>
-    <vue-menu></vue-menu>  
+    <vue-menu></vue-menu>
+    <vue-new-header></vue-new-header>
     <HelloWorld msg="Assignment W13A"/>
-    <vue-newbody></vue-newbody>
+    <vue-new-body></vue-new-body>
+    <vue-side-panel></vue-side-panel>
+    <vue-meet-dev></vue-meet-dev>
+    <vue-meet-team></vue-meet-team>
     <vue-footer></vue-footer>
   </div>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import VueMenu from './components/Menu.vue' //step 1. import the menu component
-import VueFooter from './components/Footer.vue'
-import Vuenewbody from './components/Body.vue'
-import VuenewHeader from './components/Header.vue'
-
+import HelloWorld from './components/HelloWorld.vue';
+import VueMenu from './components/Menu.vue'; //step 1. import the menu component
+import VueNewHeader from './components/Header.vue';
+import VueNewBody from './components/Body.vue';
+import VueSidePanel from './components/Sidepanel.vue';
+import VueMeetDev from './components/MeetDev.vue';
+import VueMeetTeam from './components/MeetTeam.vue';
+import VueFooter from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld, 
     VueMenu, //step 2. register the component
+    VueNewHeader,
+    VueNewBody,
     VueFooter,
-    Vuenewbody,
-    VuenewHeader
+    VueSidePanel,
+    VueMeetDev,
+    VueMeetTeam
   }
 }
 </script>

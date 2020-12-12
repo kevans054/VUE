@@ -25,9 +25,11 @@ export default {
 ul, li {
     padding: 0;
     margin: 0;
+    font-size: 30px;
 }
 
 ul {
+    background-color: rgb(228, 96, 188);
     display: flex;
     flex-direction:row;
     justify-content: space-between;

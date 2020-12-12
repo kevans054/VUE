@@ -14,5 +14,6 @@ export default {
 h3 {
   margin: 40px 0 0;
   background-color: aqua;
+  font-size: 30px;
 }
 </style>

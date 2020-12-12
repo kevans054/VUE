@@ -1,17 +1,19 @@
 <template>
-    <div id="newHeader">
-        <p>This is where the title would go.</p>
+    <div id="newheader">
+        
+        <p>This is the header component</p>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'vue-newHeader'
-  }
+  name: 'vue-new-header'
+}
 </script>
 
 <style scoped>
-    p {
+    p{
+         font-size: 30px;
         background: cadetblue;
     }
 </style>

@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>
-      Learning Vue
+      Learning Vue.JS
     </h2>
   </div>
 </template>
@@ -21,5 +21,6 @@ export default {
 h2 {
   margin: 40px 0 0;
   color: #42b983;
+  font-size: 30px;
 }
 </style>
