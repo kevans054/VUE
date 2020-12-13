@@ -1,23 +1,23 @@
 <template>
-  <div>
+  <vue-tweet>
       <article class="tweets">
-        <vue-tweets>
-        <h4>{{ tweets.myAuthor }}</h4>
-        <h6>{{ tweets.myDate }}</h6>
-        <p>{{ tweets.myText }}</p>
-        </vue-tweets>
-      </article>
-  </div>
+        <vue-container>
+        <h4>{{ myAuthor }}</h4>
+        <h6>{{ myDate }}</h6>
+        <p>{{ myText }}</p>
+        </vue-container>
+        </article>
+      </vue-tweet>
 </template>
 <script>
-import VueTweetsContainer from "./TweetsContainer.vue"
+import VueContainer from "./Container.vue"
 export default {
-  name: "vue-tweets",
-  props: 
-    ['myAuthor',
-    'myDate',
-    'myText']
+  name: "vue-tweet",
+  components: {
+    VueContainer
+  } 
 }
+
 </script>
 <style lang="scss" scoped>
 .tweets {
@@ -26,9 +26,6 @@ export default {
   background-color: rgb(156, 157, 233);
   margin-top: 10px;
 }
-// .tweets.list-view {
-//   grid-template-columns: 1fr;
-// }
 h4 {
   background-color: plum;
   font-size: 30px;

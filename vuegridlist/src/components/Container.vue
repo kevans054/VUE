@@ -2,26 +2,30 @@
   <div>
     <button @click="toggleView">Toggle View</button>
     <div id="tweets" :class="{ 'list-view': listview }">
-      <vue-tweets-container
-        v-for="(tweet, index) in tweets"
+      <vue-container
+        v-for="(tweet, index) in tweet"
         v-bind:key="index"
-        v-bind:myAuthor="tweets.author"
-        v-bimd:myDate="tweets.date"
-        v-bind:myText="tweets.text"
+        v-bind:myAuthor="tweet.author"
+        v-bimd:myDate="tweet.date"
+        v-bind:myText="tweet.text"
       >
-      </vue-tweets-container>
+      </vue-container>
     </div>
   </div>
 </template>
 <script>
-// import VueTweets from "./Tweet.vue";
+
 export default {
-  name: "vue-tweets-container",
+  name: "vue-container",
+  props: 
+    ['myAuthor',
+    'myDate',
+    'myText'],
 
   data() {
     return {
       listview: false,
-      tweets: [
+      tweet: [
         {
           author: "Karen",
           date: "December 13, 2020",
@@ -49,24 +53,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.tweets {
+#tweets {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: rgb(156, 157, 233);
   margin-top: 10px;
 }
-.tweets.list-view.list-view {
+#tweets.list-view {
   grid-template-columns: 1fr;
 }
-h4 {
-  background-color: plum;
-  font-size: 30px;
-}
-h6 {
-  background: green;
-  font-size: 30px;
-}
-p {
-  font-size: 30px;
-}
+
 </style>

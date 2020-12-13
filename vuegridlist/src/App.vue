@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <vue-tweets></vue-tweets>
+    <vue-tweet></vue-tweet>
   </div>
 </template>
 <script>
-import VueTweets from './components/Tweets.vue'
+import VueTweet from './components/Tweet.vue'
 export default {
   name: 'App',
   components: {
-    VueTweets
+    VueTweet
     }
 }
 </script>
